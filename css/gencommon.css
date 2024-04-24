@@ -1,0 +1,201 @@
+@charset "utf-8";
+html, body, div, header, nav, section, footer, figure, figcaption, ul, li, h2,p{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+/*사용할 폰트*/
+@font-face {
+    font-family: "IBMT";
+    src: url("../fonts/IBMPlexSansKR-Thin.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "IBMR";
+    src: url("../fonts/IBMPlexSansKR-Regular.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "IBMB";
+    src: url("../fonts/IBMPlexSansKR-Bold.ttf")format("truetype");
+}
+
+/*링크 스타일*/
+a:link{
+    text-decoration: none;
+    color: #4f4f4f;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #4f4f4f;
+}
+
+a:hover, a:focus{
+    text-decoration: none;
+    color: #916338;
+}
+
+/*기본 스타일*/
+#header, #videoArea, #footer{
+    width: 1695px;
+    height: 3000px;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    font-family: "IBMR";
+}
+
+/*전체 레이아웃*/
+#wrapper{
+    box-sizing: border-box;
+}
+/*헤더 영역*/
+#header{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#header .logo{
+    position: absolute;
+    width: 85%;
+    height: 80px;
+    margin: 0;
+}
+
+#header .logo img{
+    width: 50px;
+    margin: 0;
+    position: absolute;
+    top: 15%;
+    left: 55%;
+}
+
+#header>nav{
+    position: absolute;
+    right: 0;
+    width: 5%;
+
+}
+
+#header h2{
+    height:80px;
+    display: block;
+    overflow: hidden;
+    background-image: url("../images/menu.png");
+    background-repeat: no-repeat;
+    color: transparent;
+    background-position: 50% 50%;
+    border-left: 1px solid #ccc;
+}
+
+#header .mainMenu{
+    position: absolute;
+    right: 10%;
+    top: 110%;
+    z-index: 5;
+    /* height: 200%; */
+    height: 0;
+    width: 100%;
+    transition: all 0.5s;
+    overflow: hidden;
+
+}
+#header .mainMenu>li{
+    text-align: right;
+}
+
+#header .mainMenu a{
+    font-size: 1.1em;
+    padding: 5px;
+    letter-spacing: 1px;
+    line-height: 1.9;
+}
+
+#header nav:hover .mainMenu{
+    height: 270%;
+    background-color: white;
+    width: 100%;
+}
+
+#header .mainMenu a:hover{
+    border-bottom: 1px solid #916338;
+    font-family: "IBMB";
+}
+
+/*footer*/
+#footer{
+    background-color: white;
+    height: 100px;
+    width:100%;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 20px;
+    
+}
+
+#footer .offical{
+    border-bottom: 1px solid #ccc;
+    height: 30%;
+    width: 100%;
+    text-align: center ;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+#footer .offical li{
+    display: inline-block;
+    padding-top: 15px;
+}
+
+#footer .offical a{
+    padding: 0 5px;
+}
+
+#footer .offical a::before{
+    content: " | ";
+    padding-right: 8px;
+}
+
+#footer .offical li:first-child a::before{
+    content: "";
+}
+
+#footer .copyright{
+    display: inline-block;
+    width: 100%;
+    height: 60%;
+    position: relative; 
+    padding-top: 10px;
+}
+
+#footer .copyright>p{
+    display: inline-block;
+}
+
+#footer .copyright>ul{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+#footer .copyright li{
+    display: inline-block;
+    padding: 0 5px;
+}
+
+#footer .copyright a::before{
+    content: " | ";
+    padding-right: 8px;
+}
+
+#footer .copyright li:first-child a::before{
+    content: "";
+}

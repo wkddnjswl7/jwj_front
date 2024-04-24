@@ -1,0 +1,102 @@
+@charset "utf-8";
+#videoArea{
+    height: 980px;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+/*우승 이미지*/
+#winner{
+    width: 30%;
+    height: 15%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40px;
+    left: 635px;
+}
+#videoArea figure{
+    float: left;
+    margin-right: 15px;
+    text-align: center;
+}
+#winner img{
+    width: 70px;
+}
+
+#winner figcaption{
+    font-size: 0.8em;
+    margin-top: 3px;
+}
+
+/*slide video*/
+#videoSlide{
+    height: 70%;
+    display: block;
+    position: absolute;
+    top: 160px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#videoSlide input{
+    display: none;
+}
+
+#videoSlide>.slide{
+    max-width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#videoSlide .slideList{
+    white-space: nowrap;
+    font-size: 0;
+}
+
+#videoSlide .slideList>li{
+    display: inline-block;
+    vertical-align: middle;/*수직정렬*/
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#videoSlide .slideList>li>a{
+    display: block;
+}
+
+#videoSlide .slideList>li>a>iframe{
+    width: 90%;
+    position: relative;
+    left: 90px;
+}
+
+#videoSlide .slideList label{
+    position: absolute;
+    z-index: 11;
+    top: 350px;
+    transform: translateY(-50%);
+    padding: 0 0 60px 60px;
+    cursor: pointer;
+}
+
+#videoSlide .slideList .left{
+    left: 5px;
+    background: url("../images/left.png") no-repeat;
+}
+
+#videoSlide .slideList .right{
+    right: 1px;
+    background: url("../images/right.png") no-repeat;
+}
+/*슬라이드 주는 방법*/
+#videoSlide #slide1:checked ~ .slide .slideList>li{transform: translateX(0%);}
+#videoSlide #slide2:checked ~ .slide .slideList>li{transform: translateX(-100%);}
+#videoSlide #slide3:checked ~ .slide .slideList>li{transform: translateX(-200%);}
+
+/*화살표 고정시키는 법*/
+#videoSlide #slideCtrl .ctrl{display: none;}
+#videoSlide #slide1:checked ~ .slide .ctrl1{display: block;}
+#videoSlide #slide2:checked ~ .slide .ctrl2{display: block;}
+#videoSlide #slide3:checked ~ .slide .ctrl3{display: block;}

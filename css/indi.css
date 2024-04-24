@@ -1,0 +1,97 @@
+#indi{
+    width: 65%;
+    height: 1250px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    font-family: "IBMR";
+}
+
+#indi>section{
+    float: left;
+    margin: 30px 30px 0 50px;
+}
+
+#indi .indiPic{
+    /* border-top: 1px solid #916338;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid #916338; */
+    border: 3px solid transparent;
+    border-image: linear-gradient(to bottom right,#916338, #fff,#916338) 10;
+}
+#indi .indiPic img{
+    width: 300px;
+
+}
+#indi .info{
+    margin-bottom: 30px;
+}
+
+#indi .info span{
+    font-weight: bold;
+    color: #916338;
+    margin-right: 5px;
+    font-family: "IBMB";
+
+}
+
+#indi .info h2{
+    display: inline-block;
+    width: 35%;
+    font-family: "IBMB";
+    font-size: 2em;
+    border-bottom: 1px solid #916338;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+#indi .info>ul>li{
+    font-size: 1.1em;
+    margin: 5px ;
+}
+
+#indi .info li li{
+    text-indent: 30px;
+}
+
+#indi .champion{
+    margin-bottom: 30px;
+}
+
+#indi .champion>h2{
+    color: #916338;
+    padding-bottom: 15px;
+    font-family: "IBMB";
+    font-size: 1.7em;
+}
+
+#indi .champion>table{
+    border:none;
+}
+
+#indi .career, #indi .indiC{
+    margin-bottom: 30px;
+}
+
+#indi .career>h2, #indi .indiC>h2{
+    color: #916338;
+    font-family: "IBMB";
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+#indi .career>table{
+    width: 70%;
+}
+
+#indi .indiC>table{
+    width: 45%;
+    text-align: left;
+}
+
+#indi .career>table tr, #indi .indiC>table th{
+    font-family: "IBMR";
+    font-size: 1.1em;
+}

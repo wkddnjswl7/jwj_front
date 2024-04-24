@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maxinum-scale=10.0, mininum-scale=10.0">
+    <title>장원지_젠지홈페이지</title>
+    <link rel="shortcut icon" href="images/Gen.G_GoldBlack_NoText.svg">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/gencommon.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        window.onload = function(){
+            setTimeout(function(){
+                scrollTo(0,0);
+            },100)
+        }
+    </script>
+</head>
+<body>
+    <!-- wrapper 영역 -->
+    <div id="wrapper">
+        <!-- header 영역 -->
+        <header id="header">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/Gen.G_GoldBlack_NoText.svg" alt="젠지로고">
+                </a>
+            </h1>
+
+            <nav>
+                <h2 class="hidden">메뉴</h2>
+                <ul class="mainMenu">
+                    <li><a href="genplayer.html">선수 소개</a></li>
+                    <li><a href="kiin.html">Kiin</a></li>
+                    <li><a href="canyon.html">Canyon</a></li>
+                    <li><a href="chovy.html">Chovy</a></li>
+                    <li><a href="peyz.html">Peyz</a></li>
+                    <li><a href="lehends.html">Lehends</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header 영역 끝 -->
+
+        <!-- 콘텐츠 영역 -->
+        <div id="videoArea">
+            <!-- 우승 트로피 -->
+            <section id="winner">
+                <figure>
+                    <img src="images/lck.png" alt="22summer">
+                    <figcaption>2022 Summer</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lck.png" alt="23spring">
+                    <figcaption>2023 Spring</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lck.png" alt="23sunner">
+                    <figcaption>2023 Summer</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lck.png" alt="24spring">
+                    <figcaption>2024 Spring</figcaption>
+                </figure>
+            </section>
+            
+            <!--비디오 슬라이드-->
+            <section id="videoSlide">
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+
+                <div class="slide">
+                    <ul class="slideList">
+                        <li>
+                            <a>
+                                <iframe width="100%" height="750" src="https://www.youtube.com/embed/f028t44jiAI?si=SCzjP_qnMZy0axw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a>
+                                <iframe width="1400" height="750" src="https://www.youtube.com/embed/qSdSDKoK3U0?si=R8EwVoxr-W7YmRrV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <iframe width="1400" height="750" src="https://www.youtube.com/embed/SUW0j0Hz0DM?si=5fv0XdVVkCrAEvAZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </a>
+                        </li>
+
+                        <div id="slideCtrl">
+                            <div class="ctrl ctrl1">
+                                <label for="slide3" class="left"></label>
+                                <label for="slide2" class="right"></label>
+                            </div>
+                            <div class="ctrl ctrl2">
+                                <label for="slide1" class="left"></label>
+                                <label for="slide3" class="right"></label>
+                            </div>
+                            <div class="ctrl ctrl3">
+                                <label for="slide2" class="left"></label>
+                                <label for="slide1" class="right"></label>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- 콘텐츠 영역 끝 -->
+
+        <!-- footer 영역 -->
+        <footer id="footer">
+            <div id="footerIn">
+                <div class="offical">
+                    <ul>
+                        <li><a href="#">트위터</a></li>
+                        <li><a href="#">페이스북</a></li>
+                        <li><a href="#">인스타</a></li>
+                        <li><a href="#">유튜브</a></li>
+                        <li><a href="#">웨이보</a></li>
+                        <li><a href="#">디스코드</a></li>
+                        <li><a href="#">틱톡</a></li>
+                    </ul>
+
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 Gen.G Page made in Unji</p>
+
+                    <ul>
+                        <li><a href="#">문의</a></li>
+                        <li><a href="#">약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- footer 영역 끝-->
+    </div>
+    <!-- wrapper 영역 끝-->
+</body>
+</html>
