@@ -1,101 +1,200 @@
 @charset "utf-8";
-#videoArea{
-    width: 100%;
-    height: 980px;
+html, body, div, header, nav, section, footer, figure, figcaption, ul, li, h2,p{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+/*사용할 폰트*/
+@font-face {
+    font-family: "IBMT";
+    src: url("../fonts/IBMPlexSansKR-Thin.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "IBMR";
+    src: url("../fonts/IBMPlexSansKR-Regular.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "IBMB";
+    src: url("../fonts/IBMPlexSansKR-Bold.ttf")format("truetype");
+}
+
+/*링크 스타일*/
+a:link{
+    text-decoration: none;
+    color: #4f4f4f;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #4f4f4f;
+}
+
+a:hover, a:focus{
+    text-decoration: none;
+    color: #916338;
+}
+
+/*기본 스타일*/
+#header, #videoArea, #playerP, #indi, #footer{
+    width: 1695px;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    font-family: "IBMR";
+}
+
+/*전체 레이아웃*/
+#wrapper{
+    box-sizing: border-box;
+}
+/*헤더 영역*/
+#header{
     position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    border: 1px solid #ccc;
     box-sizing: border-box;
-    margin: 0 auto;
-}
-/*우승 이미지*/
-#winner{
-    width: 23%;
-    height: 9%;
-    box-sizing: border-box;
-    margin: 40px auto;
-    overflow: hidden;
-}
-#videoArea figure{
-    float: left;
-    margin: 5px;
-    text-align: center;
-}
-#winner img{
-    width: 70px;
 }
 
-#winner figcaption{
-    font-size: 0.8em;
-    margin-top: 3px;
-}
-
-/*slide video*/
-#videoSlide{
-    height: 70%;
-    display: block;
+#header .logo{
     position: absolute;
-    top: 150px;
-    margin: 0 auto;
-    width: 100%;
+    width: 85%;
+    height: 80px;
+    margin: 0;
 }
 
-#videoSlide input{
-    display: none;
+#header .logo img{
+    width: 50px;
+    margin: 0;
+    position: absolute;
+    top: 15%;
+    left: 56%;
 }
 
-#videoSlide>.slide{
-    max-width: 90%;
-    margin: 0 auto;
+#header>nav{
+    position: absolute;
+    right: 0;
+    width: 5%;
+
+}
+
+#header h2{
+    height:80px;
+    display: block;
     overflow: hidden;
-    position: relative;
+    background-image: url("../images/menu.png");
+    background-repeat: no-repeat;
+    color: transparent;
+    background-position: 50% 50%;
+    border-left: 1px solid #ccc;
 }
 
-#videoSlide .slideList{
-    white-space: nowrap;
-    font-size: 0;
-}
-
-#videoSlide .slideList>li{
-    display: inline-block;
-    vertical-align: middle;/*수직정렬*/
-    width: 100%;
+#header .mainMenu{
+    position: absolute;
+    right: 10%;
+    top: 110%;
+    z-index: 5;
+    /* height: 200%; */
+    height: 0;
+    width: 150%;
     transition: all 0.5s;
+    overflow: hidden;
+
+}
+#header .mainMenu>li{
+    text-align: right;
 }
 
-#videoSlide .slideList>li>a{
-    display: block;
+#header .mainMenu a{
+    font-size: 1.1em;
+    padding: 5px;
+    letter-spacing: 1px;
+    line-height: 1.9;
 }
 
-#videoSlide .slideList>li>a>iframe{
-    width: 90%;
-    position: relative;
-    left: 75px;
+#header nav:hover .mainMenu{
+    height: 270%;
+    background-color: transparent;
+    width: 150%;
 }
 
-#videoSlide .slideList label{
+#header .mainMenu a:hover{
+    border-bottom: 1px solid #916338;
+    font-family: "IBMB";
+}
+
+/*footer*/
+#footer{
+    background-color: white;
+    height: 100px;
+    width:100%;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 20px;
+    
+}
+
+#footer .offical{
+    border-bottom: 1px solid #ccc;
+    height: 30%;
+    width: 100%;
+    text-align: center ;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+#footer .offical li{
+    display: inline-block;
+    padding-top: 15px;
+}
+
+#footer .offical a{
+    padding: 0 5px;
+}
+
+#footer .offical a::before{
+    content: " | ";
+    padding-right: 8px;
+}
+
+#footer .offical li:first-child a::before{
+    content: "";
+}
+
+#footer .copyright{
+    display: inline-block;
+    width: 100%;
+    height: 60%;
+    position: relative; 
+    padding-top: 10px;
+}
+
+#footer .copyright>p{
+    display: inline-block;
+}
+
+#footer .copyright>ul{
+    display: inline-block;
     position: absolute;
-    z-index: 11;
-    top: 350px;
-    transform: translateY(-50%);
-    padding: 0 0 60px 60px;
-    cursor: pointer;
+    right: 0;
 }
 
-#videoSlide .slideList .left{
-    left: 1px;
-    background: url("../images/left.png") no-repeat;
+#footer .copyright li{
+    display: inline-block;
+    padding: 0 5px;
 }
 
-#videoSlide .slideList .right{
-    right: 1px;
-    background: url("../images/right.png") no-repeat;
+#footer .copyright a::before{
+    content: " | ";
+    padding-right: 8px;
 }
-/*슬라이드 주는 방법*/
-#videoSlide #slide1:checked ~ .slide .slideList>li{transform: translateX(0%);}
-#videoSlide #slide2:checked ~ .slide .slideList>li{transform: translateX(-100%);}
-#videoSlide #slide3:checked ~ .slide .slideList>li{transform: translateX(-200%);}
 
-/*화살표 고정시키는 법*/
-#videoSlide #slideCtrl .ctrl{display: none;}
-#videoSlide #slide1:checked ~ .slide .ctrl1{display: block;}
-#videoSlide #slide2:checked ~ .slide .ctrl2{display: block;}
-#videoSlide #slide3:checked ~ .slide .ctrl3{display: block;}
+#footer .copyright li:first-child a::before{
+    content: "";
+}
