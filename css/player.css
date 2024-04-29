@@ -5,13 +5,17 @@
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    position: relative;
 }
 
 #playerP .photo{
     text-align: center;
     margin-top: 2px;
     margin-bottom: 30px;
+}
+
+#playerP img{
+    width: 100%;
+    margin: 0 auto;
 }
 
 #playerP .profile{

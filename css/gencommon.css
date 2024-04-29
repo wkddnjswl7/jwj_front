@@ -40,9 +40,8 @@ a:hover, a:focus{
 }
 
 /*기본 스타일*/
-#header, #videoArea, #footer{
+#header, #videoArea, #playerP, #indi, #footer{
     width: 1695px;
-    height: 3000px;
     color: black;
     background-color: white;
     font-size: 16px;
@@ -75,7 +74,7 @@ a:hover, a:focus{
     margin: 0;
     position: absolute;
     top: 15%;
-    left: 55%;
+    left: 56%;
 }
 
 #header>nav{
@@ -103,7 +102,7 @@ a:hover, a:focus{
     z-index: 5;
     /* height: 200%; */
     height: 0;
-    width: 100%;
+    width: 150%;
     transition: all 0.5s;
     overflow: hidden;
 
@@ -121,8 +120,8 @@ a:hover, a:focus{
 
 #header nav:hover .mainMenu{
     height: 270%;
-    background-color: white;
-    width: 100%;
+    background-color: transparent;
+    width: 150%;
 }
 
 #header .mainMenu a:hover{
